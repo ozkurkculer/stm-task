@@ -5,7 +5,7 @@ import Image from 'next/image'
 function Footer() {
   return (
     <>
-      <div className="w-full h-80 bottom-0 absolute flex flex-col bg-orange-50 justify-center items-center">
+      <div className="w-full h-80 bottom-0 flex flex-col bg-orange-50 justify-center items-center">
         <div className="px-40 py-10 w-full flex flex-row">
           <div className="flex-col justify-start items-start gap-3 flex flex-grow">
             <Image src="/images/ctclogo.png" alt="CTC Logo" width={180} height={84} />
