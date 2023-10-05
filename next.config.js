@@ -20,6 +20,12 @@ const nextConfig = {
             port: '',
             pathname: '/85/85',
           },
+          {
+            protocol: 'https',
+            hostname: 'picsum.photos',
+            port: '',
+            pathname: '/210/160',
+          },
         ],
       },
 }
