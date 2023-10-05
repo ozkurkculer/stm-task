@@ -1,8 +1,16 @@
-import React from 'react'
+"use client"
+import React, {useEffect} from 'react'
 import Image from 'next/image'
 import SearchBar from '@/components/SearchBar'
+import productUIService from '@/services/productUI.service'
 
 function Home() {
+
+    useEffect(() => {
+      productUIService.takeProducts();
+    
+    }, [])
+    
     return (
         <>
             <div className="w-full h-full flex flex-col">
