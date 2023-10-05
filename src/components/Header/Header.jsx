@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import Button from '../Button';
 
 
 function Header() {
@@ -39,7 +38,6 @@ function Header() {
           <div className="text-slate-800 text-base font-normal font-['Source Sans Pro']">
             Contact
           </div>
-          <Button text="Buy online" className="bg-orange-500 hover:bg-orange-600 transition-colors duration-200 justify-center items-center whitespace-nowrap px-5 py-2 text-white font-normal"/>
         </div>
       </div>
     </div>
