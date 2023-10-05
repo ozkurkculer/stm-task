@@ -5,18 +5,13 @@ import StarIcon from '@mui/icons-material/Star';
 import Rating from '@mui/material/Rating';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import Image from 'next/image';
+import BackToHome from '@/components/BackToHome';
 
 function ProductDetails() {
     return (
 
         <div className="w-full h-full flex flex-col py-[80px] gap-5">
-            <div className='flex flex-row gap-5 items-center'>
-                <button type='button' className='bg-orange-100 rounded-full w-[40px] h-[40px] flex items-center justify-center text-orange-600 hover:text-orange-100 hover:bg-orange-600 transition-colors duration-200'>
-                    <ArrowBackOutlinedIcon />
-                </button>
-                <span className="text-[#2f294d]">Back to previous page</span>
-            </div>
-            <hr />
+            <BackToHome/>
             <div className="flex flex-row gap-10">
                 <div className="flex flex-col gap-4 items-center">
                     <div className='h-[463px] w-[536px] bg-orange-100 rounded-2xl flex items-center justify-center'>
