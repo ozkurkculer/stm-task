@@ -1,12 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Button from '../Button';
+
 
 function Header() {
+
   return (
-    <div className="w-full h-full">
-      <div className="w-full h-20 flex flex-row gap-10 bg-white shadow left-0 top-0 absolute px-36 items-center">
-      <Image src="/images/ctclogo.png" alt="CTC Logo" width={90} height={42} className="mx-28" />
+    <div className="w-full fixed top-0 z-50 h-[80px]">
+      <div className="w-full h-full flex flex-row gap-10 bg-white shadow left-0 top-0 absolute px-36 items-center">
+      <div className="mx-28 h-full flex flex-col justify-center">
+      <Image src="/images/ctclogo.png" alt="CTC Logo" width={90} height={42} className=' max-w-[inherit]' />
+      </div>
         <div className="gap-10 flex flex-row flex-grow w-full justify-center">
           <div className="text-slate-800 text-base font-normal font-['Source Sans Pro']">
             Home
@@ -19,7 +24,7 @@ function Header() {
           </div>
         </div>
         <div className="flex flex-row items-center gap-7 ">
-          <div className="flex flex-row whitespace-nowrap gap-3 items-center">
+          <div className="flex flex-row whitespace-nowrap gap-5 items-center">
             <div>
               <div className="w-5 h-5 bg-orange-600 rounded-full border-2 border-white absolute ml-3 -mt-2 justify-start">
                 <span className="text-xs absolute ml-[3px] -mt-1/2 text-white">0</span>
@@ -34,11 +39,7 @@ function Header() {
           <div className="text-slate-800 text-base font-normal font-['Source Sans Pro']">
             Contact
           </div>
-          <div className="bg-orange-500 justify-center items-center whitespace-nowrap px-5 py-2">
-            <div className="text-white text-base font-normal ">
-              Buy online
-            </div>
-          </div>
+          <Button text="Buy online" className="bg-orange-500 hover:bg-orange-600 transition-colors duration-200 justify-center items-center whitespace-nowrap px-5 py-2 text-white font-normal"/>
         </div>
       </div>
     </div>
