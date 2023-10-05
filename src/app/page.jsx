@@ -5,19 +5,23 @@ import HomePage from "@/pages/Home";
 import ProductDetails from "@/pages/ProductDetails";
 import Products from "@/pages/Products";
 import ShoppingCart from "@/pages/ShoppingCart";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <div className="mt-[80px] px-page">
-        <HomePage />
-        {/* <ProductDetails /> */}
-        {/* <ShoppingCart /> */}
-        {/* <Products/> */}
-      </div>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Header />
+        <div className="mt-[80px] px-page">
+          <Route path="/">
+            <Route index element={<HomePage />} />
+            <Route path="cart-details" element={<ShoppingCart />} />
+            <Route path="products" element={<Products />} />
+          </Route>
+        </div>
+        <Footer />
+      </Routes>
+    </BrowserRouter>
   );
 }

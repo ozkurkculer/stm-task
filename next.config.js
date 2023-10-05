@@ -26,6 +26,12 @@ const nextConfig = {
             port: '',
             pathname: '/210/160',
           },
+          {
+            protocol: 'https',
+            hostname: 'i.dummyjson.com',
+            port: '',
+            pathname: '/**',
+          },
         ],
       },
 }
