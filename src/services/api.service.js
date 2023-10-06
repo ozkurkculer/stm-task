@@ -11,8 +11,16 @@ const getAllProducts = async () => {
   return data;
 };
 
+const getProductDetail = async (id) => {
+  const data = await axios.get(PRODUCTS_URL + "/" + id).then((res) => {
+    return res.data
+  })
+  return data
+}
+
 const apiService = {
   getAllProducts,
+  getProductDetail,
 };
 
 export default apiService;

@@ -5,8 +5,14 @@ const takeProducts = async () => {
     return data.products
 }
 
+const takeProductDetail = async (id) => {
+    const data = await apiService.getProductDetail(id);
+    return data
+}
+
 const productUIService = {
     takeProducts,
+    takeProductDetail,
 }
 
 export default productUIService
