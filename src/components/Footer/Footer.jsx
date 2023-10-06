@@ -14,7 +14,6 @@ function Footer() {
           <div className=" flex-col justify-start items-start gap-4 inline-flex flex-grow">
             <div className="text-slate-800 text-xl font-bold leading-loose">Quick links</div>
             <div className="text-slate-800 text-xl font-normal">Products</div>
-            <div className="text-slate-800 text-xl font-normal">About us</div>
             <div className="text-slate-800 text-xl font-normal">Shopping Cart</div>
           </div>
           <div className=" flex-col justify-start items-start gap-4 inline-flex flex-grow">
