@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import { BrowserRouter } from "react-router-dom";
 
 const poppins = Poppins({
   subsets: ["latin"],
