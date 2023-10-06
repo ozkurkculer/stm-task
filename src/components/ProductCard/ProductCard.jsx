@@ -1,10 +1,11 @@
 import React from 'react'
 import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function ProductCard(props) {
     return (
-        <button type='button' id={props.data.id} className="flex flex-col w-[250px] h-[300px] bg-white rounded-lg shadow-md text-left items-center p-4 gap-3 hover:bg-gray-100 transition-colors duration-200">
+        <Link href={{ pathname: "/product-details/"+ props.data.id , query: { id: props.data.id } }} type='button' id={props.data.id} className="flex flex-col w-[250px] h-[300px] bg-white rounded-lg shadow-md text-left items-center p-4 gap-3 hover:bg-gray-100 transition-colors duration-200">
             <div className="bg-orange-100 rounded-md w-[225px] h-[175px] flex items-center justify-center">
                 <Image src={props.data.thumbnail} alt="Product Image" width={200} height={160} className=' w-auto h-full rounded-md' />
             </div>
@@ -19,7 +20,7 @@ function ProductCard(props) {
                     <span className="text-sm font-semibold">{props.data.rating}</span>
                 </div>
             </div>
-        </button>
+        </Link>
     )
 }
 
