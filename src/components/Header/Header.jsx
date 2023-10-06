@@ -1,10 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { useNavigate } from 'react-router-dom';
+import Link from 'next/link';
 
 function Header() {
-  const navigate = useNavigate();
 
   return (
     <div className="w-full fixed top-0 z-50 h-[80px]">
@@ -13,18 +12,15 @@ function Header() {
       <Image src="/images/ctclogo.png" alt="CTC Logo" width={90} height={42} className=' max-w-[inherit]' />
       </div>
         <div className="gap-10 flex flex-row flex-grow w-full justify-center">
-          <a href='/' className="text-slate-800 text-base font-normal">
+          <Link href='/' className="text-slate-800 text-base font-normal">
             Home
-          </a>
-          <a href='/' className="text-slate-800 text-base font-normal">
-            About us
-          </a>
-          <a href='/products' className="text-slate-800 text-base font-normal">
+          </Link>
+          <Link href='/products' className="text-slate-800 text-base font-normal">
             Products
-          </a>
+          </Link>
         </div>
-        <div className="flex flex-row items-center gap-7 ">
-          <div className="flex flex-row whitespace-nowrap gap-5 items-center">
+        <div className="flex flex-row items-center gap-7 mx-24">
+          <Link href="/shopping-cart" className="flex flex-row whitespace-nowrap gap-5 items-center">
             <div>
               <div className="w-5 h-5 bg-orange-600 rounded-full border-2 border-white absolute ml-3 -mt-2 justify-start">
                 <span className="text-xs absolute ml-[3px] -mt-1/2 text-white">0</span>
@@ -35,10 +31,7 @@ function Header() {
               <span className="text-sm">My Cart</span>
               <span className="text-xs font-semibold text-orange-700"> $ 500</span>
             </div>
-          </div>
-          <div className="text-slate-800 text-base font-normal font-['Source Sans Pro']">
-            Contact
-          </div>
+          </Link>
         </div>
       </div>
     </div>
