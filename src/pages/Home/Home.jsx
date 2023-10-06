@@ -5,16 +5,6 @@ import SearchBar from '@/components/SearchBar'
 import productUIService from '@/services/productUI.service'
 
 function Home() {
-
-    useEffect(() => {
-        getData();
-    }, [])
-
-    const getData = async () => {
-        const data = await productUIService.takeProducts();
-        console.log(data)
-    }
-
     return (
         <>
             <div className="w-full h-full flex flex-col">
