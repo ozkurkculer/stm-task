@@ -23,6 +23,13 @@ function ProductDetails() {
         console.log(data);
         setProduct(data)
     }
+
+    const addCart = () => {
+        const data = {id: router.query.slug}
+        productUIService.addCartProduct(data);
+        productUIService.takeCartSize();
+        productUIService.takeCartTotalCost();
+    }
     return (
 
         <div className="w-full h-full flex flex-col py-[80px] gap-5 px-page">
@@ -84,10 +91,7 @@ function ProductDetails() {
                         </li>
                     </ul>
                     <div className='flex flex-row gap-2'>
-                        <button type="button" className='h-[44px] w-[226px] bg-orange-600 text-white p-[14px] rounded-lg text-center hover:bg-orange-700 transition-colors duration-200'>
-                            <span>Buy it now</span>
-                        </button>
-                        <button type="button" className='h-[44px] w-[226px] bg-orange-100 text-orange-600 p-[14px] rounded-lg text-center hover:text-orange-500 hover:bg-orange-200 transition-colors duration-200'>
+                        <button type="button" onClick={addCart} className='h-[44px] w-[226px] bg-orange-600 text-white p-[14px] rounded-lg text-center hover:bg-orange-700 transition-colors duration-200'>
                             <span>Add to cart</span>
                         </button>
                     </div>
