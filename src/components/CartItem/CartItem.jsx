@@ -13,12 +13,8 @@ function CartItem() {
                 <div className="text-gray-400 font-light">Apple</div>
             </div>
             <div className="flex flex-row gap-5 items-center">
-                <div className="flex items-center justify-center bg-orange-100 px-2 py-1 rounded-md text-orange-700 font-semibold">
+                <div className="flex items-center justify-center text-orange-600 font-semibold">
                     <span>13.90 $</span>
-                </div>
-                <div className="flex flex-row gap-1">
-                    <span className='text-gray-700'>Piece:</span>
-                    <span className="text-gray-800 font-bold">1</span>
                 </div>
                 <button type="button" className='w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center text-red-600 hover:text-white hover:bg-red-600 transition-colors duration-200'>
                     <DeleteOutlineOutlinedIcon />
